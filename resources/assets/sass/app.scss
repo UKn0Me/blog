@@ -1,0 +1,312 @@
+@import "variables";
+
+html {
+    padding: 0;
+}
+
+body {
+    color: $text_color;
+    background: $background_color;
+
+    font-family: $primary_fonts;
+    font-weight: 400;
+    font-size: 18px;
+
+    p {
+        margin: 16px 0;
+    }
+
+    i, em {
+        font-style: italic;
+    }
+
+    b, strong {
+        font-weight: 500;
+    }
+
+    em {
+        @extend i;
+        @extend b;
+    }
+
+    code, pre, samp, kbd {
+        padding: 5px;
+        color: lighten($text_color, 20%);
+        background-color: $background_color;
+        font-family: $monospace_fonts;
+
+        b, strong, em {
+            font-weight: 700;
+        }
+    }
+
+    pre {
+        padding: 0;
+        font-size: 16px;
+        overflow: auto;
+        border-left: 3px solid $highlight_color;
+    }
+
+    blockquote {
+        margin: 20px 0;
+        padding: 5px 40px;
+        border-left: 3px solid $background_color;
+        font-family: $primary_fonts;
+        color: lighten($text_color, 20%);
+    }
+
+    a {
+        color: $highlight_color;
+        text-decoration: none;
+
+        &:hover {
+            color: darken($highlight_color, 10%);
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 800;
+        font-family: $header_fonts;
+    }
+
+    img {
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 100%;
+    }
+
+    figure {
+        margin: 0;
+        background-color: $background_color;
+
+        figcaption {
+            padding: 0 8px 5px;
+            font-size: 16px;
+            color: lighten($text_color, 20%);
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid $background_color;
+
+        tr {
+            text-align: left;
+
+            td {
+                padding: 6px 8px;
+                border-left: 2px solid $background_color;
+            }
+
+            th {
+                @extend td;
+                font-weight: 500;
+                color: lighten($text_color, 20%);
+                background: $background_color;
+            }
+
+            &:nth-child(odd) {
+                background-color: lighten($background_color, 2%);
+            }
+        }
+    }
+}
+
+.container {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 1240px;
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    height: 100%;
+
+    @media($mobile) {
+        padding: 0 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+#page-header {
+    display: block;
+    height: calc(100vw / 6);
+    min-height: 200px;
+    max-height: 330px;
+    background: $highlight_color;
+
+    #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 60px);
+        margin: 0 auto;
+        font-size: 72px;
+        font-weight: 900;
+
+        @media($mobile) {
+            font-size: 48px;
+        }
+
+        @media($tablet) {
+            font-size: 54px;
+        }
+
+        a,
+        a:hover {
+            color: lighten($text_color, 12%);
+        }
+    }
+
+    #main-menu {
+        height: 60px;
+        font-weight: 300;
+        font-family: 'Open Sans', sans-serif;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+
+            li {
+                flex: 1;
+                display: block;
+                font-size: 22px;
+                text-align: center;
+                padding: 0 5px;
+
+                @media($mobile) {
+                    font-size: 18px;
+                }
+
+                a {
+                    display: block;
+                    color: inherit;
+                    line-height: 60px;
+                    padding: 0 10px;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:active,
+                    &.active {
+                        color: inherit;
+                        //color: darken($text_color, 10%);
+                        background: $background_color;
+                    }
+
+                    p {
+                        margin: 0;
+                        display: block;
+
+                        @media ($mobile) {
+                            display: none;
+                        }
+                    }
+
+                    .fa {
+                        display: none !important;
+
+                        @media ($mobile) {
+                            display: inline-block !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#page-body {
+    display: block;
+    margin: 40px auto;
+    max-width: 1280px;
+    min-width: 320px;
+    background: #ffffff;
+
+    #page-header {
+        display: flex;
+        background: inherit;
+        border-bottom: 1px invert($text_color) solid;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media($desktop) {
+            height: 240px;
+        }
+
+        @media($tablet) {
+            height: 180px;
+        }
+
+        h2 {
+            flex: 1;
+            font-size: 64px;
+            text-align: center;
+
+            @media($mobile) {
+                font-size: 40px;
+            }
+
+            @media($tablet) {
+                font-size: 52px
+            }
+        }
+
+        aside {
+            margin: 20px 0;
+            color: darken($background_color, 25%);
+        }
+    }
+
+    #page-content {
+        line-height: 1.5;
+
+        @media($mobile) {
+            padding: 20px 0;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 0;
+
+            article {
+                flex: 6 1 400px;
+                margin: 0 10px;
+
+                @media($mobile) {
+                    margin: 0;
+                    min-width: 100%;
+                }
+            }
+
+            aside {
+                flex: 3 1 200px;
+                margin: 0 15px;
+
+                @media($mobile) {
+                    margin: 0;
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+
+    #post-comments {
+        padding: 40px 0;
+        border-top: 1px #dddddd solid;
+
+        header {
+            height: auto;
+            border-bottom: none;
+        }
+    }
+}
+
+#page-footer {
+    padding: 40px 0;
+    color: $background_color;
+    background: $text_color;
+}
