@@ -1,0 +1,115 @@
+form {
+
+}
+
+input,
+button,
+select,
+textarea {
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 17px;
+    font-family: $body_font_family;
+    color: $secondary_color;
+    background: $background_color_alt;
+    border: 2px $background-color_alt solid;
+    @include border-radius(4px);
+
+    &:hover {
+        background-color: $background-color;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        background-color: $background-color;
+        border-color: $primary_color;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+// Input specific styling
+input {
+    &[type=text],
+    &[type=email],
+    &[type=password],
+    &[type=search],
+    &[type=url] {
+        min-width: 300px;
+
+        @media ($mobile) {
+            min-width: 220px;
+            width: 100%;
+        }
+    }
+
+    &[type=number] {
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    &input[type=reset],
+    &input[type=submit] {
+        @extend button;
+    }
+}
+
+textarea {
+    width: 100%;
+    max-width: 420px;
+}
+
+// Button styling
+button {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: $background-color;
+    }
+
+    &:focus {
+        background-color: $background-color;
+    }
+
+    &:active {
+        background-color: $background_color_alt;
+    }
+}
+
+// Submit button styling
+button[type=submit],
+input[type=submit] {
+    border-color: $primary_color;
+    color: $background-color;
+    background-color: $primary_color;
+
+    &:hover {
+        border-color: $primary_color_alt;
+        background-color: $primary_color_alt;
+    }
+
+    &:active {
+        background-color: $primary_color;
+    }
+}
+
+select {
+    padding-right: 25px;
+    appearance: none;
+    background-size: 20%;
+    background-position: 92%;
+    background-repeat: no-repeat;
+    background-image: url("/img/icons/black/angle-down.svg");
+}
+

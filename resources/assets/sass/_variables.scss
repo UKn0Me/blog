@@ -1,11 +1,41 @@
-$text_color: #222222;
-$highlight_color: #00ccff;
+// Colours
+$primary_color: #00ccff;
+$primary_color_alt: darken($primary_color, 10%);
+
+$secondary_color: #222222;
+$secondary_color_alt: lighten($secondary_color, 20%);
+
 $background_color: #f2f2f2;
+$background_color_alt: darken($background_color, 5%);
 
-$primary_fonts: 'Roboto', sans-serif;
-$header_fonts: 'Raleway', sans-serif;
-$monospace_fonts: 'Inconsolata', monospace;
+$border_color: darken($background_color, 10%);
+$border_color_alt: darken($primary_color, 10%);
 
-$mobile: "max-width: 767px";
-$tablet: "min-width: 768px) and (max-width: 1024px";
-$desktop: "min-width: 1025px";
+$success_color: #cdf481;
+$success_color_alt: darken($success_color, 10%);
+
+$status_color: #f7b6d1;
+$status_color_alt: darken($status_color, 10%);
+
+$warning_color: #f4e281;
+$warning_color_alt: darken($warning_color, 10%);
+
+$error_color: #f4a981;
+$error_color_alt: darken($error_color, 10%);
+
+// Typography
+$heading_font_family: "Raleway", sans-serif;;
+$logo_font_family: $heading_font_family;
+$body_font_family: "Roboto", sans-serif;
+$monospace_font_family: "Inconsolata", monospace;
+
+// Viewpoints
+$mobile_max: 767px;
+$mobile: "max-width: #{$mobile_max}";
+
+$tablet_min: 768px;
+$tablet_max: 1024px;
+$tablet: "min-width: #{$tablet_min}) and (max-width: #{$tablet_max}";
+
+$desktop_min: 1025px;
+$desktop: "min-width: #{$desktop_min}";

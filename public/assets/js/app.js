@@ -95,16 +95,17 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(187);
+__webpack_require__(187);
+module.exports = __webpack_require__(188);
 
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-window._ = __webpack_require__(3);
-window.Vue = __webpack_require__(5);
-window.hljs = __webpack_require__(6);
+var _ = __webpack_require__(3);
+var Vue = __webpack_require__(5);
+var hljs = __webpack_require__(6);
 
 vr = __webpack_require__(184);
 v2f = __webpack_require__(186);
@@ -47238,6 +47239,12 @@ function pluralize (value) {
 
 /***/ }),
 /* 187 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 188 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

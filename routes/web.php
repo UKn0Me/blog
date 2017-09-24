@@ -11,6 +11,10 @@
 |
 */
 
-$router->get('/', function() use ($router) {
+$router->get('/', function() {
     return view('index');
+});
+
+$router->get('error/{code}', function($error_code) {
+    abort($error_code);
 });

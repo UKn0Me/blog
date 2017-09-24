@@ -26,9 +26,10 @@
     <title>@yield('title') | Aidhan Dossel</title>
 
     @section('styles')
-        <link rel="stylesheet" href="/assets/css/app.css">
-
         <link rel="stylesheet" href="/assets/css/dist/normalize.css">
+
+        <link rel="stylesheet" href="/assets/css/base.css">
+        <link rel="stylesheet" href="/assets/css/app.css">
 
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:800,900%7COpen+Sans:300">
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500%7CInconsolata:400,700">

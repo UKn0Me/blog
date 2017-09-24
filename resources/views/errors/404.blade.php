@@ -1,4 +1,4 @@
-@extends('_layouts.base')
+@extends('layouts.base')
 
 @section('title', 'Code 404!')
 @section('description', "Oh no! We can't find what you're looking for.")

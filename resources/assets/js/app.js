@@ -1,6 +1,6 @@
-window._ = require('lodash');
-window.Vue = require('vue');
-window.hljs = require('highlight.js');
+const _ = require('lodash');
+const Vue = require('vue');
+const hljs = require('highlight.js');
 
 vr = require('vue-resource');
 v2f = require('vue2-filters');
