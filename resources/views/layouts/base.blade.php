@@ -11,7 +11,7 @@
         <meta property="og:title" content="@yield('title')">
         <meta property="og:description" content="@yield('description')">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="{{ url() }}">
+        <meta property="og:url" content="{{ app('request')->url() }}">
 
         <meta property="og:locale" content="en_AU">
         <meta property="og:locale:alternate" content="en_GB">
