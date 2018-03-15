@@ -6,8 +6,6 @@
 @section('meta')
     @parent
 
-    <meta property="og:image" content="https://media.aidhan.net/file/aidhan/assets/test/fireground-retina.jpg">
-    <meta name="twitter:image" content="https://media.aidhan.net/file/aidhan/assets/test/fireground-retina.jpg">
 @endsection
 
 @section('content')

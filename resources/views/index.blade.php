@@ -6,8 +6,8 @@
 @section('meta')
     @parent
 
-    <meta property="og:image" content="https://media.aidhan.net/file/aidhan/assets/test/fireground-retina.jpg">
-    <meta name="twitter:image" content="https://media.aidhan.net/file/aidhan/assets/test/fireground-retina.jpg">
+    <meta property="og:image" content="/assets/img/test/fireground.jpg">
+    <meta name="twitter:image" content="/assets/img/test/fireground.jpg">
 @endsection
 
 @section('content')
@@ -83,7 +83,7 @@
         </article>
 
         <aside>
-            <img src="https://media.aidhan.net/file/aidhan/assets/test/fireground-retina.jpg"
+            <img src="/assets/img/test/fireground.jpg"
                  alt="Patrolling for hotspots and flareups after a bushfire."
                  title="Patrolling for hotspots and flareups after a bushfire.">
         </aside>
