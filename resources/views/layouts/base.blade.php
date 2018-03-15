@@ -4,10 +4,10 @@
     @section('meta')
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Aidhan Dossel">
+        <meta name="author" content="Aidhan">
         <meta name="description" content="@yield('description')">
 
-        <meta property="og:site_name" content="Aidhan Dossel">
+        <meta property="og:site_name" content="Aidhan">
         <meta property="og:title" content="@yield('title')">
         <meta property="og:description" content="@yield('description')">
         <meta property="og:type" content="website">
@@ -23,7 +23,7 @@
         <meta name="twitter:description" content="@yield('description')">
     @show
 
-    <title>@yield('title') | Aidhan Dossel</title>
+    <title>@yield('title') | Aidhan</title>
 
     @section('styles')
         <link rel="stylesheet" href="/assets/css/dist/normalize.css">
